@@ -1,6 +1,10 @@
 import os from 'os';
 
 export async function GET() {
+  if (process.env.RENDER_EXTERNAL_URL) {
+    return Response.json({ url: `${process.env.RENDER_EXTERNAL_URL}/play` });
+  }
+
   const nets = os.networkInterfaces();
   const addresses = [];
   Object.keys(nets).forEach((name) => {
