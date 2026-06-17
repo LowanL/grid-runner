@@ -5,21 +5,25 @@
   "scripts": {
     "dev": "node server-next.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server-next.js"
+    "start": "cross-env NODE_ENV=production node server-next.js"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "dependencies": {
+    "cross-env": "^10.1.0",
     "next": "^14.2.0",
+    "qrcode": "^1.5.4",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
-    "ws": "^8.20.0",
-    "qrcode": "^1.5.4"
+    "ws": "^8.20.0"
   },
   "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.4",
-    "@types/node": "^20",
-    "@types/react": "^18",
     "typescript": "^5"
   }
 }
