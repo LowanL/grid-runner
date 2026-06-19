@@ -77,15 +77,15 @@ function DPadBtn({ dir, icon, onPress }) {
       onPointerLeave={stopPress}
       onPointerCancel={stopPress}
       style={{
-        width: 76,
-        height: 76,
-        borderRadius: 16,
+        width: 100,
+        height: 100,
+        borderRadius: 20,
         background: 'rgba(0,240,255,0.07)',
         border: '1.5px solid rgba(0,240,255,0.2)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        fontSize: 30,
+        fontSize: 38,
         cursor: 'pointer',
         touchAction: 'none',
         WebkitUserSelect: 'none',
@@ -289,7 +289,6 @@ function EliminatedScreen({ player, state, malusList, onMalus }) {
 }
 
 // ── Active Play Screen ────────────────────────────────────────────────────────
-// Features 2 & 8: show cell content in center, fully centered layout
 function PlayScreen({ player, state, onMove }) {
   const myPlayer = state?.players?.[player?.id];
   const myCell = state?.grid?.find(c => c.row === myPlayer?.row && c.col === myPlayer?.col);
@@ -319,27 +318,34 @@ function PlayScreen({ player, state, onMove }) {
         )}
       </div>
 
-      {/* Feature 8: D-pad + center cell, fully centered in remaining space */}
+      {/* Contenu de la case — affiché en haut de la manette */}
+      <div className="flex-shrink-0 px-4 pb-3">
+        <div
+          className="rounded-xl px-4 py-3 flex items-center gap-3"
+          style={{ background: '#0d1422', border: `1.5px solid ${cellSafeColor}`, boxShadow: `0 0 14px ${cellSafeColor}33` }}
+        >
+          <PlayerSprite spriteIndex={player?.spriteIndex} size={32} />
+          <div
+            className="font-orbitron font-black text-base text-center leading-snug flex-1"
+            style={{ color: cellSafeColor, wordBreak: 'break-word' }}
+          >
+            {cellLabel}
+          </div>
+        </div>
+      </div>
+
+      {/* D-pad avec boutons agrandis */}
       <div className="flex-1 flex items-center justify-center">
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center gap-3">
           <DPadBtn dir="up" icon="▲" onPress={onMove} />
-          <div className="flex gap-2 items-center">
+          <div className="flex gap-3 items-center">
             <DPadBtn dir="left" icon="◀" onPress={onMove} />
-
-            {/* Feature 2: center cell shows current cell content */}
             <div
-              className="w-[76px] h-[76px] rounded-2xl flex flex-col items-center justify-center gap-0.5"
-              style={{ background: '#0d1422', border: `1.5px solid ${cellSafeColor}`, boxShadow: `0 0 10px ${cellSafeColor}44` }}
+              className="w-[100px] h-[100px] rounded-2xl flex items-center justify-center"
+              style={{ background: 'rgba(0,240,255,0.04)', border: '1px solid rgba(0,240,255,0.1)' }}
             >
-              <div
-                className="font-orbitron font-black text-xs text-center leading-tight px-1"
-                style={{ color: cellSafeColor, maxWidth: 70, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}
-              >
-                {cellLabel}
-              </div>
-              <PlayerSprite spriteIndex={player?.spriteIndex} size={28} />
+              <PlayerSprite spriteIndex={player?.spriteIndex} size={40} />
             </div>
-
             <DPadBtn dir="right" icon="▶" onPress={onMove} />
           </div>
           <DPadBtn dir="down" icon="▼" onPress={onMove} />

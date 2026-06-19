@@ -40,7 +40,6 @@ export default function GameGrid({ state, blind, style: extraStyle }) {
         style = {
           background: isSafe ? 'rgba(0,200,80,0.7)' : 'rgba(255,0,50,0.7)',
           border: `1px solid ${isSafe ? 'rgba(0,255,100,0.5)' : 'rgba(255,0,50,0.5)'}`,
-          fontSize: '1.2rem',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -78,7 +77,7 @@ export default function GameGrid({ state, blind, style: extraStyle }) {
           <>
             <PlayerSprite spriteIndex={playerHere.spriteIndex} size={36} />
             <span style={{ fontSize: 8, fontFamily: "'Orbitron',monospace", fontWeight: 'bold', color: '#05050a', letterSpacing: 1, lineHeight: 1 }}>
-              {playerHere.name.slice(0, 3).toUpperCase()}
+              {playerHere.name.slice(0, 7).toUpperCase()}
             </span>
           </>
         );
@@ -93,7 +92,6 @@ export default function GameGrid({ state, blind, style: extraStyle }) {
           background: baseBg,
           border: '1px solid rgba(180,180,200,0.18)',
           color: 'rgba(220,220,240,0.95)',
-          fontSize: '1.4rem',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -108,8 +106,28 @@ export default function GameGrid({ state, blind, style: extraStyle }) {
       }
 
       cells.push(
-        <div key={key} className={`${extraCls} rounded`} style={style}>
-          {content}
+        <div
+          key={key}
+          className={`${extraCls} rounded`}
+          style={{ ...style, overflow: 'hidden', minWidth: 0, minHeight: 0 }}
+        >
+          {typeof content === 'string'
+            ? (
+              <span style={{
+                display: 'block',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                whiteSpace: 'nowrap',
+                width: '100%',
+                textAlign: 'center',
+                padding: '0 2px',
+                fontSize: 'clamp(0.45rem, 1.8cqi, 1.4rem)',
+              }}>
+                {content}
+              </span>
+            )
+            : content
+          }
         </div>
       );
     }
@@ -120,6 +138,7 @@ export default function GameGrid({ state, blind, style: extraStyle }) {
       style={{
         display: 'grid',
         gridTemplateColumns: `repeat(${state.gridCols || 0}, 1fr)`,
+        gridAutoRows: '1fr',
         gap: '6px',
         background: 'rgba(255,255,255,0.04)',
         border: '1px solid rgba(255,255,255,0.1)',
