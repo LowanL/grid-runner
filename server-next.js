@@ -88,6 +88,68 @@ const QUESTIONS = [
   { text: "Quelle couleur mélange bleu et jaune ?", type: "quiz", answers: ["Violet", "Vert", "Orange", "Turquoise"], correct: "Vert" },
   { text: "Combien de bits dans un octet ?", type: "quiz", answers: ["4", "8", "16", "32"], correct: "8" },
   { text: "Qui a fondé Microsoft ?", type: "quiz", answers: ["Steve Jobs", "Bill Gates", "Mark Zuckerberg", "Jeff Bezos"], correct: "Bill Gates" },
+
+  // Mathématiques (suite)
+  { text: "100 ÷ 4 = ?", type: "quiz", answers: ["20", "25", "30", "50"], correct: "25" },
+  { text: "9 × 9 = ?", type: "quiz", answers: ["72", "81", "90", "99"], correct: "81" },
+  { text: "√64 = ?", type: "quiz", answers: ["6", "7", "8", "9"], correct: "8" },
+  { text: "50% de 80 = ?", type: "quiz", answers: ["30", "35", "40", "45"], correct: "40" },
+  { text: "17 + 28 = ?", type: "quiz", answers: ["43", "44", "45", "46"], correct: "45" },
+  { text: "144 ÷ 12 = ?", type: "quiz", answers: ["10", "11", "12", "13"], correct: "12" },
+  { text: "Angles dans un triangle ?", type: "quiz", answers: ["90°", "180°", "270°", "360°"], correct: "180°" },
+  { text: "4³ = ?", type: "quiz", answers: ["48", "56", "64", "72"], correct: "64" },
+  { text: "25% de 60 = ?", type: "quiz", answers: ["10", "12", "15", "20"], correct: "15" },
+  { text: "6 × 7 = ?", type: "quiz", answers: ["36", "40", "42", "48"], correct: "42" },
+
+  // Géographie (suite)
+  { text: "Capitale de l'Italie ?", type: "quiz", answers: ["Naples", "Milan", "Rome", "Turin"], correct: "Rome" },
+  { text: "Capitale de la Russie ?", type: "quiz", answers: ["Saint-Pétersbourg", "Kiev", "Moscou", "Minsk"], correct: "Moscou" },
+  { text: "Capitale de l'Australie ?", type: "quiz", answers: ["Sydney", "Melbourne", "Brisbane", "Canberra"], correct: "Canberra" },
+  { text: "Capitale du Canada ?", type: "quiz", answers: ["Toronto", "Montréal", "Vancouver", "Ottawa"], correct: "Ottawa" },
+  { text: "Capitale de la Chine ?", type: "quiz", answers: ["Shanghai", "Hong Kong", "Pékin", "Shenzhen"], correct: "Pékin" },
+  { text: "Plus long fleuve du monde ?", type: "quiz", answers: ["Amazone", "Mississippi", "Yang-Tsé", "Nil"], correct: "Nil" },
+  { text: "Plus grand pays du monde ?", type: "quiz", answers: ["Canada", "Chine", "USA", "Russie"], correct: "Russie" },
+  { text: "Capitale de l'Argentine ?", type: "quiz", answers: ["Santiago", "Lima", "Buenos Aires", "Montevideo"], correct: "Buenos Aires" },
+  { text: "Capitale de l'Inde ?", type: "quiz", answers: ["Mumbai", "Kolkata", "New Delhi", "Chennai"], correct: "New Delhi" },
+  { text: "Plus grand désert chaud du monde ?", type: "quiz", answers: ["Gobi", "Sahara", "Kalahari", "Arabie"], correct: "Sahara" },
+
+  // Sciences (suite)
+  { text: "Combien de dents a un adulte ?", type: "quiz", answers: ["28", "30", "32", "34"], correct: "32" },
+  { text: "Quel gaz est essentiel à la respiration ?", type: "quiz", answers: ["Azote", "Oxygène", "CO2", "Hélium"], correct: "Oxygène" },
+  { text: "Combien de planètes dans le système solaire ?", type: "quiz", answers: ["7", "8", "9", "10"], correct: "8" },
+  { text: "À quelle température bout l'eau (°C) ?", type: "quiz", answers: ["90", "95", "100", "105"], correct: "100" },
+  { text: "Formule chimique du sel de table ?", type: "quiz", answers: ["NaK", "NaCl", "KCl", "CaCl"], correct: "NaCl" },
+  { text: "Meilleur conducteur électrique ?", type: "quiz", answers: ["Or", "Fer", "Argent", "Cuivre"], correct: "Argent" },
+  { text: "Combien de vertèbres chez l'humain ?", type: "quiz", answers: ["28", "30", "33", "36"], correct: "33" },
+  { text: "Quelle planète a des anneaux visibles ?", type: "quiz", answers: ["Jupiter", "Mars", "Saturne", "Uranus"], correct: "Saturne" },
+  { text: "Quel organe filtre le sang ?", type: "quiz", answers: ["Foie", "Pancréas", "Rein", "Rate"], correct: "Rein" },
+  { text: "Distance Terre-Lune (km) ?", type: "quiz", answers: ["100 000", "200 000", "384 000", "500 000"], correct: "384 000" },
+
+  // Histoire & Culture (suite)
+  { text: "En quelle année a été construite la Tour Eiffel ?", type: "quiz", answers: ["1879", "1884", "1889", "1895"], correct: "1889" },
+  { text: "Qui a découvert l'Amérique en 1492 ?", type: "quiz", answers: ["Vasco de Gama", "Christophe Colomb", "Magellan", "Amerigo Vespucci"], correct: "Christophe Colomb" },
+  { text: "Chute du mur de Berlin ?", type: "quiz", answers: ["1985", "1987", "1989", "1991"], correct: "1989" },
+  { text: "Qui a écrit Hamlet ?", type: "quiz", answers: ["Molière", "Voltaire", "Shakespeare", "Dante"], correct: "Shakespeare" },
+  { text: "Qui a inventé le téléphone ?", type: "quiz", answers: ["Edison", "Tesla", "Bell", "Marconi"], correct: "Bell" },
+  { text: "Début de la Première Guerre mondiale ?", type: "quiz", answers: ["1910", "1912", "1914", "1916"], correct: "1914" },
+  { text: "Qui a peint La Nuit étoilée ?", type: "quiz", answers: ["Monet", "Picasso", "Van Gogh", "Renoir"], correct: "Van Gogh" },
+  { text: "Napoléon était originaire de quelle île ?", type: "quiz", answers: ["Sardaigne", "Sicile", "Corse", "Malte"], correct: "Corse" },
+
+  // Sport (suite)
+  { text: "Joueurs dans une équipe de volleyball ?", type: "quiz", answers: ["5", "6", "7", "8"], correct: "6" },
+  { text: "Quel pays a gagné le plus de Coupes du Monde ?", type: "quiz", answers: ["Allemagne", "Italie", "Argentine", "Brésil"], correct: "Brésil" },
+  { text: "Surface de jeu à Roland-Garros ?", type: "quiz", answers: ["Herbe", "Dur", "Terre battue", "Moquette"], correct: "Terre battue" },
+  { text: "Rounds dans un match de boxe professionnel ?", type: "quiz", answers: ["8", "10", "12", "15"], correct: "12" },
+  { text: "Quel sport se joue à Wimbledon ?", type: "quiz", answers: ["Golf", "Tennis", "Cricket", "Polo"], correct: "Tennis" },
+  { text: "Joueurs dans une équipe de rugby à XV ?", type: "quiz", answers: ["13", "14", "15", "16"], correct: "15" },
+
+  // Animaux (suite)
+  { text: "Combien de pattes a un insecte ?", type: "quiz", answers: ["4", "6", "8", "10"], correct: "6" },
+  { text: "Combien de pattes a un crabe ?", type: "quiz", answers: ["6", "8", "10", "12"], correct: "10" },
+  { text: "Comment appelle-t-on le bébé cheval ?", type: "quiz", answers: ["Veau", "Poulain", "Agneau", "Chaton"], correct: "Poulain" },
+  { text: "Plus grand oiseau du monde ?", type: "quiz", answers: ["Condor", "Albatros", "Autruche", "Émeu"], correct: "Autruche" },
+  { text: "Animal terrestre le plus lourd ?", type: "quiz", answers: ["Hippopotame", "Rhinocéros", "Éléphant", "Girafe"], correct: "Éléphant" },
+  { text: "Combien de bras a une étoile de mer classique ?", type: "quiz", answers: ["3", "4", "5", "6"], correct: "5" },
 ];
 
 const MALUS_LIST = [
